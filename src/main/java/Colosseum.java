@@ -102,7 +102,7 @@ public class Colosseum {
             }
         }
 
-        System.out.println("Enter your defense level (1-49): ");
+        System.out.println("Enter your defense level (1-" + (MAX_HIT_POINTS - attackLevel) + "): ");
         int defenseLevel = input.nextInt();
         if (defenseLevel < 1 || defenseLevel > MAX_HIT_POINTS - attackLevel) {
             while (true) {
@@ -165,14 +165,12 @@ public class Colosseum {
         System.out.println("Player 1, build your Pokemon!");
         System.out.println("=================");
         firstPokemon = buildPokemon();
-        firstPokemon.name = "Chuchu";
 
         System.out.println("");
 
         System.out.println("Player 2, build your Pokemon!");
         System.out.println("==================");
         secondPokemon = buildPokemon();
-        secondPokemon.name = "Xyz";
     }
 
     /**
